@@ -1,11 +1,6 @@
 #include "pch.h"
 #include "MyStringEx.h"
 
-void CMyStringEx::SetString(const char* pszParam)
-{
-	
-}
-
 int CMyStringEx::Find(const char* pszParam)
 {
 	if (pszParam == NULL || GetString() == NULL)
