@@ -11,15 +11,8 @@ void TestFunc()
 
 int main()
 {
-	CMyStringEx strTest;
-
-	// 문자열 필터링 및 대체되는 경우
-	strTest.SetString("멍멍이아들");
-	cout << strTest << endl;
-
-	// 문자열 필터링되지 않는 경우
-	strTest.SetString("Hello");
-	cout << strTest << endl;
+	CMyStringEx strLeft("Hello"), strRight("World");
+	cout << strLeft + strRight << endl;
 
 	return 0;
 }

@@ -2,6 +2,8 @@
 #include "MyStringEx.h"
 
 
+CMyStringEx::CMyStringEx(const char* pszParam) : CMyString::CMyString(pszParam) { }
+
 int CMyStringEx::Find(const char* pszParam)
 {
 	if (pszParam == NULL || GetString() == NULL)
