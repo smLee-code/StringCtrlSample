@@ -5,7 +5,9 @@ class CMyStringEx : public CMyString
 private:
 
 public:
-	explicit CMyStringEx(const char* pszParam);
+	CMyStringEx();
+	CMyStringEx(const char* pszParam);
+	~CMyStringEx();
 
 	int Find(const char* pszParam);
 	int SetString(const char* pszParam);

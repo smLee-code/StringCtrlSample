@@ -1,8 +1,11 @@
 #include "pch.h"
 #include "MyStringEx.h"
 
+CMyStringEx::CMyStringEx() { }
 
-CMyStringEx::CMyStringEx(const char* pszParam) : CMyString::CMyString(pszParam) { }
+CMyStringEx::CMyStringEx(const char* pszParam) : CMyString(pszParam) { }
+
+CMyStringEx::~CMyStringEx() { }
 
 int CMyStringEx::Find(const char* pszParam)
 {
