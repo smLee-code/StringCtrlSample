@@ -67,8 +67,14 @@ int CMyString::SetString(const char* pszParam)
 	strcpy_s(m_pszData, sizeof(char) * (nLength + 1), pszParam);
 	m_nLength = nLength;
 
+	// 미래를 호출한다! (추후 파생 클래스에서 OnSetString을 재정의 하여 호출.)
+	OnSetString(m_pszData, m_nLength);
+
 	return nLength;
 }
+
+// SetString 의 미래를 구현하기 위해 남겨둔 virtual method
+void CMyString::OnSetString(char* pszData, int nLength) { }
 
 char* CMyString::GetString() const
 {

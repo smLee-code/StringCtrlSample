@@ -16,6 +16,7 @@ public:
 	~CMyString();
 
 	int SetString(const char* pszParam);
+	virtual void OnSetString(char* pszData, int nLength);
 	char* GetString() const;
 	int GetLength() const;
 	int Append(const char* pszParam);
@@ -30,5 +31,6 @@ public:
 	int operator!=(const CMyString &rhs);
 	char& operator[] (int nIndex);
 	char operator[] (int nIndex) const;
+	
 };
 

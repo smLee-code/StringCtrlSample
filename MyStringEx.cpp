@@ -14,3 +14,9 @@ int CMyStringEx::Find(const char* pszParam)
 	return -1;
 
 }
+
+void CMyStringEx::OnSetString(char* pszData, int nLength)
+{
+	if (strcmp(pszData, "ธÛธÛภฬพฦต้") == 0)
+		strcpy_s(pszData, sizeof(char) * (nLength + 1), "*ย๘วัพฦต้*");
+}
