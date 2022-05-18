@@ -4,23 +4,22 @@
 #include "pch.h"
 #include "MyStringEx.h"
 
-void TestFunc(const CMyString& strParam)
+void TestFunc()
 {
-	cout << strParam[0] << endl;
-	cout << strParam[strParam.GetLength() - 1] << endl;
+	
 }
 
 int main()
 {
 	CMyStringEx strTest;
-	strTest.SetString("I am a boy.");
+
+	// 문자열 필터링 및 대체되는 경우
+	strTest.SetString("멍멍이아들");
 	cout << strTest << endl;
 
-	int nIndex = strTest.Find("am");
-	cout << "Index: " << nIndex << endl;
-
-	CMyString a("ABCED");
-	char* str = a.GetString();
+	// 문자열 필터링되지 않는 경우
+	strTest.SetString("Hello");
+	cout << strTest << endl;
 
 	return 0;
 }

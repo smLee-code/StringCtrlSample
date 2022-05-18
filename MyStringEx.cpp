@@ -1,6 +1,14 @@
 #include "pch.h"
 #include "MyStringEx.h"
 
+void CMyStringEx::SetString(const char* pszParam)
+{
+	SetString(pszParam);
+
+	if (strstr(GetString(), "ธÛธÛภฬพฦต้") != NULL)
+		SetString("ย๘วั ป็ถ๗");
+}
+
 int CMyStringEx::Find(const char* pszParam)
 {
 	if (pszParam == NULL || GetString() == NULL)
