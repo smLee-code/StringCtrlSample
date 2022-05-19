@@ -26,6 +26,7 @@ public:
 	CMyString& operator=(const CMyString &rhs);
 	CMyString& operator=(CMyString &&rhs);
 	CMyString operator+(const CMyString &rhs);
+	friend CMyString operator+(const char* pszParam, const CMyString& strParam);
 	CMyString& operator+=(const CMyString &rhs);
 	int operator==(const CMyString &rhs);
 	int operator!=(const CMyString &rhs);
@@ -33,4 +34,3 @@ public:
 	char operator[] (int nIndex) const;
 	
 };
-

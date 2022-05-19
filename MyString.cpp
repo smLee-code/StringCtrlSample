@@ -175,6 +175,14 @@ CMyString CMyString::operator+(const CMyString &rhs)
 	return tmpResult;
 }
 
+CMyString operator+(const char* pszParam, const CMyString& strParam)
+{
+	CMyString strResult(pszParam);
+	strResult.Append(strParam.m_pszData);
+
+	return strResult;
+}
+
 CMyString& CMyString::operator+=(const CMyString &rhs)
 {
 	// cout << "operator+=" << endl;

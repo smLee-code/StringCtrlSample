@@ -12,9 +12,10 @@ void TestFunc(const CMyString& strParam)
 
 int main()
 {
-	CMyStringEx strTest;
-	strTest.SetString("멍멍이아들");
-	cout << strTest << endl;
+	CMyString b("World"), c;
+
+	c = "Hello" + b;
+	cout << c << endl;
 
 	return 0;
 }
